@@ -51,11 +51,11 @@
             <div class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
 				
-		<?php
+		<?php	
 		$category = Mage::getModel('catalog/layer')->getCurrentCategory();
-        $module   = Mage::app()->getRequest()->getControllerName(); 
-       if($module=="category"){?>
-		       <iframe src="https://search.shopelect.com/?search=<?php echo $category->getName();?>&embed=true" width="100%" height="600"></iframe>
+        $module   = Mage::app()->getRequest()->getModuleName(); 
+       if($module=="catalog"){?>
+		 <iframe src="https://search.shopelect.com?q=<?php echo $category->getName();?>" width="100%" height="600"></iframe>
              <?php }else{  ?>								
                 <?php // This left_first block will display above the main content on smaller viewports ?>
                 <?php if ($_leftContent = $this->getChildHtml('left_first')): ?>

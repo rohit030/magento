@@ -30,10 +30,8 @@
  *
  * @see app/design/frontend/base/default/template/customer/form/register.phtml
  */
-/** @var $this Mage_Customer_Block_Form_Register *Rohit Chauhan */
+/** @var $this Mage_Customer_Block_Form_Register */
 ?>
-<?php echo $this->url();?>
-
 <div class="account-create">
     <div class="page-title">
         <h1><?php echo $this->__('Create an Account') ?></h1>
@@ -64,7 +62,7 @@
             <?php $_taxvat = $this->getLayout()->createBlock('customer/widget_taxvat') ?>
             <?php if ($_taxvat->isEnabled()): ?>
                 <li><?php echo $_taxvat->setTaxvat($this->getFormData()->getTaxvat())->toHtml() ?></li>
-            <?php endif  ?>
+            <?php endif ?>
             <?php $_gender = $this->getLayout()->createBlock('customer/widget_gender') ?>
             <?php if ($_gender->isEnabled()): ?>
                 <li><?php echo $_gender->setGender($this->getFormData()->getGender())->toHtml() ?></li>

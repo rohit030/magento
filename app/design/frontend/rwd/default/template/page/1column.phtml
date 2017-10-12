@@ -50,17 +50,10 @@
         <div class="main-container col1-layout">
             <div class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
-				<?php	
-		  $category  = Mage::getModel('catalog/layer')->getCurrentCategory();
-          $module    = Mage::app()->getRequest()->getControllerName(); 
-       if($module=="category"){?>
-		       <iframe src="https://search.shopelect.com/?search=<?php echo $category->getName();?>&embed=true" width="100%" height="600"></iframe>
-             <?php }else{  ?>	
                 <div class="col-main">
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
                 </div>
-			 <?php } ?>
             </div>
         </div>
         <?php echo $this->getChildHtml('footer_before') ?>

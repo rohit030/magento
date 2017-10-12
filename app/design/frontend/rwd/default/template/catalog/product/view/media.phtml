@@ -40,7 +40,7 @@
     <div class="product-image-gallery">
         <img id="image-main"
              class="gallery-image visible"
-             src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(250) ?>"
+             src="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>"
              alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
              title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
 
@@ -57,6 +57,7 @@
 
 <?php if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views">
+    <h2><?php echo $this->__('More Views') ?></h2>
     <ul class="product-image-thumbs">
     <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
         <?php if ($this->isGalleryImageVisible($_image)): ?>

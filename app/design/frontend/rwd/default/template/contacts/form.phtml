@@ -25,10 +25,10 @@
  */
 ?>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
-<div class="page-title" id="enquery">
-    <h1><?php echo Mage::helper('contacts')->__('Quick Enquiry Form') ?></h1>
+<div class="page-title">
+    <h1><?php echo Mage::helper('contacts')->__('Contact Us') ?></h1>
 </div>
-<form action="https://www.shopelect.com/contacts/index/post/<?php //echo $this->getFormAction(); ?>" id="contactForm" method="post" class="scaffold-form">
+<form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post" class="scaffold-form">
     <div class="fieldset">
         <h2 class="legend"><?php echo Mage::helper('contacts')->__('Contact Information') ?></h2>
         <p class="required"><?php echo Mage::helper('contacts')->__('* Required Fields') ?></p>
@@ -48,9 +48,9 @@
                 </div>
             </li>
             <li>
-                <label for="telephone" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Telephone') ?></label>
+                <label for="telephone"><?php echo Mage::helper('contacts')->__('Telephone') ?></label>
                 <div class="input-box">
-                    <input name="telephone" id="telephone" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Telephone')) ?>" value="" class="input-text required-entry" type="tel" />
+                    <input name="telephone" id="telephone" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Telephone')) ?>" value="" class="input-text" type="tel" />
                 </div>
             </li>
             <li class="wide">

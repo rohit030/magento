@@ -21,18 +21,17 @@
  *
  * @category    Mage
  * @package     Mage_Core
- * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- * testing
-/
+ */
 -->
 <config>
     <global>
         <install>
-            <date><![CDATA[Sat, 08 Oct 2016 11:42:17 +0000]]></date>
+            <date><![CDATA[Fri, 29 Sep 2017 10:40:21 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[03d5593ceb42d38cfe67f2fa60c1ee27]]></key>
+            <key><![CDATA[0f3e797a07f79d6082a150080abeb414]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -42,9 +41,9 @@
             <default_setup>
                 <connection>
                     <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[dbuser.shopelect]]></username>
-                    <password><![CDATA[tV/lJ6whuk0=]]></password>
-                    <dbname><![CDATA[shopelect_04102017]]></dbname>
+                    <username><![CDATA[dbuser.dev]]></username>
+                    <password><![CDATA[gPWpu1UY7gw=]]></password>
+                    <dbname><![CDATA[dev634c]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
@@ -54,31 +53,12 @@
             </default_setup>
         </resources>
         <session_save><![CDATA[files]]></session_save>
-        <cache>
-        <backend>Cm_Cache_Backend_Redis</backend>
-        <backend_options>
-	<server>127.0.0.1</server>
-	<port>6379</port>
-	<persistent>1</persistent>
-	<database>9</database>
-	<password></password>
-	<force_standalone>0</force_standalone>
-	<connect_retries>1</connect_retries>
-	<read_timeout>20</read_timeout>
-	<automatic_cleaning_factor>0</automatic_cleaning_factor>
-	<compress_data>1</compress_data>
-	<compress_tags>1</compress_tags>
-	<compress_threshold>20480</compress_threshold>
-	<compression_lib>gzip</compression_lib>
-	</backend_options>
-	</cache>
-
     </global>
     <admin>
         <routers>
             <adminhtml>
                 <args>
-                    <frontName><![CDATA[backpanel]]></frontName>
+                    <frontName><![CDATA[admin]]></frontName>
                 </args>
             </adminhtml>
         </routers>
